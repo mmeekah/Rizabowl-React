@@ -1,5 +1,8 @@
 import React from "react";
+import Hero from "../components/Hero";
 
-export default function Blog() {
-  return <div>Hello from Blog</div>;
-}
+const Blog = () => {
+  return <Hero hero="aboutHero" />;
+};
+
+export default Blog;

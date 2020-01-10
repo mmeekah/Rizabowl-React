@@ -17,10 +17,10 @@
 }
 /* globals */
 body {
-  padding-top: 66px;
+  /* padding-top: 66px;  */
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Dosis, Arial, Helvetica Neue, sans-serif;
+  font-family: "Dosis", sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -151,15 +151,15 @@ h6 {
   color: #6d6d6d;
 }
 
-.topbar__social {
+/* .topbar__social {
   line-height: 1;
   float: left;
   text-align: right;
   width: 20%;
-}
+} */
 
 .topbar__social--deep ul li a {
-  color: #6d6d6d;
+  color: var(--mainWhite);
 }
 
 @media (max-width: 767px) {
@@ -182,7 +182,7 @@ h6 {
 
 /* Navbar */
 .navbar {
-  position: fixed;
+  position: relevant;
   top: 0;
   left: 0;
   width: 100%;
@@ -201,12 +201,12 @@ h6 {
   outline: none;
 }
 .nav-icon {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: var(--primaryColor);
 }
 .nav-links {
-  /* height: 0;
-  overflow: hidden; */
+  height: 0;
+  overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
 }
@@ -226,7 +226,7 @@ h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 250px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -261,6 +261,29 @@ h6 {
   background-image: url("./images/room-2.jpeg");
   min-height: 60vh;
 }
+.aboutHero {
+  min-height: calc(100vh - 66px);
+  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutHero {
+  background-image: url("./images/room-2.jpeg");
+  min-height: 60vh;
+}
+.blogHero {
+  min-height: calc(100vh - 66px);
+  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blogHero {
+  background-image: url("./images/room-2.jpeg");
+  min-height: 60vh;
+}
+
 /* End of Hero */
 /* Banner */
 .banner {

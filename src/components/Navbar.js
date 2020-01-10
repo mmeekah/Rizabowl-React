@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../images/logo.svg";
+import logo from "../images/logo.jpg";
 import { FaAlignRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -16,26 +16,23 @@ export default class Navbar extends Component {
       <div>
         <div className="topbar">
           <div className="topbar__wrapper">
-            <div className="container">
+            <div>
               <div className="topbar__inner">
-                <div className="topbar__social">
-                  <ul className="social-list">
-                    <li>
-                      <Link to="https://www.instagram.com/rizabowl/">
-                        <i className="fab fa-instagram" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="#">
-                        <i className="fab fa-facebook" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="#">
-                        <i className="fab fa-pinterest" />
-                      </Link>
-                    </li>
-                  </ul>
+                <div className="topbar__social ml-5">
+                  <div>
+                    <Link
+                      to="https://www.instagram.com/rizabowl/"
+                      className="text-light"
+                    >
+                      <i className="fab fa-instagram" />
+                    </Link>
+                    <Link to="#" className="mx-2 text-light">
+                      <i className="fab fa-facebook-f"></i>
+                    </Link>
+                    <Link to="#">
+                      <i className="fab fa-pinterest text-light" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -46,7 +43,7 @@ export default class Navbar extends Component {
           <div className="nav-center">
             <div className="nav-header">
               <Link to="/">
-                <img src={logo} alt="Rizabowl" />
+                <img src={logo} alt="Rizabowl" width="40px" />
               </Link>
               <button
                 type="button"
@@ -60,16 +57,17 @@ export default class Navbar extends Component {
               className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
             >
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/">HOME</Link>
               </li>
               <li>
-                <Link to="/">Products</Link>
+                <Link to="/">PRODUCTS</Link>
+              </li>
+
+              <li>
+                <Link to="/">ABOUT</Link>
               </li>
               <li>
-                <Link to="/">About</Link>
-              </li>
-              <li>
-                <Link to="/">Blog</Link>
+                <Link to="/">BLOG</Link>
               </li>
             </ul>
           </div>
