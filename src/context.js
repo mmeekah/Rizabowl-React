@@ -8,7 +8,16 @@ class ProductProvider extends Component {
     products: [],
     sortedProducts: [],
     featuredProducts: [],
-    loading: true
+    loading: true,
+    type: "all",
+    capacity: 1,
+    price: 0,
+    minPrice: 0,
+    maxPrice: 0,
+    minSize: 0,
+    maxSize: 0
+    // breakfast: false,
+    //pets: false
   };
   //getData{
 
@@ -37,9 +46,17 @@ class ProductProvider extends Component {
     return tempItems;
   }
 
+  getProduct = slug => {
+    let tempProducts = [...this.state.products];
+    const product = tempProducts.find(product => product.slug === slug);
+    return product;
+  };
+
   render() {
     return (
-      <ProductContext.Provider value={{ ...this.state }}>
+      <ProductContext.Provider
+        value={{ ...this.state, getProduct: this.getProduct }}
+      >
         {this.props.children}
       </ProductContext.Provider>
     );
@@ -47,5 +64,15 @@ class ProductProvider extends Component {
 }
 
 const ProductConsumer = ProductContext.Consumer;
+
+export function withProductConsumer(Component) {
+  return function ConsumerWrapper(props) {
+    return (
+      <ProductConsumer>
+        {value => <Component {...props} context={value} />}
+      </ProductConsumer>
+    );
+  };
+}
 
 export { ProductProvider, ProductConsumer, ProductContext };

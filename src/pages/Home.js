@@ -16,7 +16,7 @@ export default function Home() {
         </Banner>
       </Hero>
       <Services />
-      <FeaturedProducts></FeaturedProducts>
+      <FeaturedProducts />
     </>
   );
 }
