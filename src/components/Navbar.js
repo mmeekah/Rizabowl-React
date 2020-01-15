@@ -20,18 +20,22 @@ export default class Navbar extends Component {
               <div className="topbar__inner">
                 <div className="topbar__social ml-5">
                   <div>
-                    <Link
-                      to="https://www.instagram.com/rizabowl/"
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/rizabowl/"
                       className="text-light"
                     >
                       <i className="fab fa-instagram" />
-                    </Link>
-                    <Link to="#" className="mx-2 text-light">
+                    </a>
+                    <a
+                      href="https://www.facebook.com/"
+                      className="mx-2 text-light"
+                    >
                       <i className="fab fa-facebook-f"></i>
-                    </Link>
-                    <Link to="#">
+                    </a>
+                    <a href="https://www.pinterest.com/justinablakeney/ceramics-pottery/">
                       <i className="fab fa-pinterest text-light" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -60,15 +64,18 @@ export default class Navbar extends Component {
                 <Link to="/">HOME</Link>
               </li>
               <li>
-                <Link to="/">PRODUCTS</Link>
+                <Link to="/products">PRODUCTS</Link>
               </li>
 
               <li>
-                <Link to="/">ABOUT</Link>
+                <Link to="/about">ABOUT</Link>
               </li>
               <li>
-                <Link to="/">BLOG</Link>
+                <Link to="/blog">BLOG</Link>
               </li>
+              {/* <li>
+                <Link to="/profile">PROFILE</Link>
+              </li> */}
             </ul>
           </div>
         </nav>

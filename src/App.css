@@ -226,7 +226,7 @@ h6 {
 }
 
 .show-nav {
-  height: 250px;
+  height: 330px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -250,37 +250,48 @@ h6 {
 /* end of navbar */
 /* Hero */
 .defaultHero,
-.roomsHero {
+.homeHero {
   min-height: calc(100vh - 66px);
   background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.homeHero {
+  background-image: url("./images/defaultBcg.jpeg");
+  min-height: 60vh;
+}
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  min-height: calc(100vh - 66px);
+  background: url("./images/products-hero.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roomsHero {
+  background-image: url("./images/products-hero.jpeg");
   min-height: 60vh;
 }
 .aboutHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/about-hero.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .aboutHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/about-hero.jpeg");
   min-height: 60vh;
 }
 .blogHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/blog.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .blogHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/blog.jpeg");
   min-height: 60vh;
 }
 
@@ -627,3 +638,112 @@ h6 {
   }
 }
 /* end of rooms fitler*/
+
+/* Footer */
+/*------------------------------------
+                Footer
+------------------------------------*/
+.footer-wrapper {
+  background-color: #2d2827;
+  padding: 60px 0;
+  margin-top: 60px;
+}
+
+.footer .footer-copyright {
+  background: #d7d7d7;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer .footer-copyright p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 0.1em;
+}
+
+.footer-heading {
+  margin-bottom: 30px;
+}
+
+.footer-heading h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.footer-company .company-logo {
+  margin-bottom: 15px;
+}
+
+.footer-company .company-logo a {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: #e5e5e5;
+  font-family: "Dosis", Arial, "Helvetica Neue", sans-serif;
+}
+
+.footer-company .company-logo a:hover {
+  color: #ac907f;
+}
+
+.footer-company .company-contact {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-company .company-contact li {
+  list-style: none;
+  color: #999;
+  line-height: 3;
+}
+
+.footer-company .company-contact li i {
+  margin-right: 15px;
+}
+
+.footer .shop-list,
+.footer .link-list {
+  margin: 0;
+  padding: 0;
+}
+
+.footer .shop-list li,
+.footer .link-list li {
+  list-style: none;
+  line-height: 2.5;
+}
+
+.footer .shop-list li a,
+.footer .link-list li a {
+  color: #999;
+}
+
+.footer .shop-list li a:hover,
+.footer .link-list li a:hover {
+  color: #ac907f;
+}
+
+.footer-ins .ins-list {
+  margin: 0 -7px;
+  padding: 0;
+}
+
+.footer-ins .ins-list li {
+  display: inline-block;
+  width: 90px;
+  height: 80px;
+  list-style: none;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+
+.footer-ins .ins-list li img {
+  width: 100%;
+}
+
+/* End of Footer */

@@ -11,7 +11,6 @@ function ProductContainer({ context }) {
   }
   return (
     <>
-      Hello From Products Container
       <ProductFilter products={products} />
       <ProductList products={sortedProducts} />
     </>
