@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import items from "./data";
+// import items from "./data";
+import Client from './Contentful';
+
 const ProductContext = React.createContext();
 //<ProductContext.Provider value={'hello'}
 
@@ -21,25 +23,39 @@ class ProductProvider extends Component {
   };
 
   //getData{
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "rizabowl"
+        // order: "sys.createdAt"
+        // order: "field.price"
+      });
+      let products = this.formatData(response.items);
+      let featuredProducts = products.filter(
+        product => product.featured === true
+      );
+      let maxPrice = Math.max(...products.map(item => item.price));
+      let maxSize = Math.max(...products.map(item => item.size));
+
+      this.setState({
+        products,
+        featuredProducts,
+        sortedProducts: products,
+        loading: false,
+        price: maxPrice,
+        maxPrice,
+        maxSize
+      });
+    } catch (error) {
+
+    }
+  }
+
+
 
   componentDidMount() {
-    //this.getData
-    let products = this.formatData(items);
-    let featuredProducts = products.filter(
-      product => product.featured === true
-    );
-    let maxPrice = Math.max(...products.map(item => item.price));
-    let maxSize = Math.max(...products.map(item => item.size));
+    this.getData()
 
-    this.setState({
-      products,
-      featuredProducts,
-      sortedProducts: products,
-      loading: false,
-      price: maxPrice,
-      maxPrice,
-      maxSize
-    });
   }
 
   formatData(items) {
